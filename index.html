@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/main.css">
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="/d3plus/d3plus.full.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <script type="text/javascript">
+    $(function(){
+      $.getJSON( '/_data/data.json', function( data ) {
+        new d3plus.LinePlot()
+            .data(data)
+            .groupBy("tipo")
+            .x('ano')
+            .y('monto')
+            .render();
+
+
+        var chart = new d3plus.Geomap()
+              .data(data)
+              .topojson('/_data/mx_tj.json', function(data){
+                data.objects.states.geometries.forEach(function(part, index, theArray){
+                  name = part.properties.state_name.toUpperCase();
+                  data.objects.states.geometries[index]['id'] = part.properties.state_name.toUpperCase();
+                })
+                return data;
+
+              })
+              .topojsonKey('states')
+              .groupBy('estado')
+              .label(function(d) {
+                return d.estado + "<br >"+ d.monto;
+              })
+              .colorScale("monto");
+        chart.render();
+
+       });
+    });
+
+    
+    </script>
+  
+  <div id="mapa"></div>
+</body>
+</html>

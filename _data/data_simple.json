@@ -1,0 +1,8 @@
+[
+{"id":1,"ano":2011,"beneficiario":"11 DE DICIEMBRE DE 1996 SPR DE RI","rnpa":2602001881,"llave_unica":2602001881,"estado":"SONORA","monto":1,"tipo":"Diesel"},
+{"id":3,"ano":2011,"beneficiario":"11 DE DICIEMBRE DE 1996 SPR DE RI","rnpa":2602001881,"llave_unica":2602001881,"estado":"SONORA","monto":8   ,"tipo":"Diesel"},
+{"id":2,"ano":2011,"beneficiario":"ABRAHAM BARCELO JORGE BAIDABE","rnpa":3102001041,"llave_unica":3102001041,"estado":"YUCATAN","monto":2,"tipo":"Diesel"},
+{"id":6,"ano":2011,"beneficiario":"ACOSTA OLSON JESUS","rnpa":2511002178,"llave_unica":2511002178,"estado":"SINALOA","monto":3,"tipo":"Diesel"},
+{"id":7,"ano":2011,"beneficiario":"ACUACAM SA DE CV","rnpa":2801000692,"llave_unica":2801000692,"estado":"TAMAULIPAS","monto":4,"tipo":"Diesel"},
+{"id":75272,"ano":2015,"beneficiario":"DAVID LEANDRO ROMAN","rnpa":3007000916,"llave_unica":3007000916,"estado":"VERACRUZ DE IGNACIO DE LA LLAVE","monto":5,"tipo":"Gasolina"}
+]
